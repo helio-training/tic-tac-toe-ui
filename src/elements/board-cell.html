@@ -1,0 +1,38 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="board-cell">
+  <template>
+
+    <style>
+      :host {
+        display: flex;
+
+        font-size: 72px;
+        font-weight: bold;
+        padding: 50px;
+      }
+
+    </style>
+
+    <slot>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </slot>
+
+  </template>
+
+  <script>
+    class BoardCell extends Polymer.Element {
+
+      static get is() { return 'board-cell' }
+
+      static get config() {
+        // properties, observers meta data
+        return {};
+      }
+
+      connectedCallback() { }
+    }
+
+    customElements.define(BoardCell.is, BoardCell);
+  </script>
+</dom-module>

@@ -1,0 +1,44 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="elements/game-board.html">
+
+
+<dom-module id="ttt-app">
+  <template>
+
+    <style>
+      :host {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        /*width: 100%;*/
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+
+    <slot>
+      <game-board id="board"></game-board>
+    </slot>
+
+  </template>
+
+  <script>
+    class TttApp extends Polymer.Element {
+
+      static get is() { return 'ttt-app' }
+
+
+      static get config() {
+        // properties, observers meta data
+        return {};
+      }
+
+//      connectedCallback() {
+//        super.connectedCallback();
+//        this.firstElementChild.setAttribute('selected', '');
+//      }
+    }
+
+    customElements.define(TttApp.is, TttApp);
+  </script>
+</dom-module>

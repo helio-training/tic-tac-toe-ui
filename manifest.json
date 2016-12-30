@@ -1,0 +1,6 @@
+{
+  "name": "tic-tac-toe-ui",
+  "short_name": "tic-tac-toe",
+  "start_url": "/",
+  "display": "standalone"
+}
